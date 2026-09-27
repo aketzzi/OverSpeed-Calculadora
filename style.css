@@ -1,0 +1,816 @@
+/* ==========================================
+              CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: "Outfit", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #123c70 0%,
+            #071525 45%,
+            #030912 100%
+        );
+
+    color: white;
+
+    min-height: 100vh;
+
+    padding-bottom: 140px;
+
+}
+
+
+/* ==========================================
+                  FONDO
+========================================== */
+
+.fondo {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 140, 255, 0.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(0, 100, 255, 0.10),
+            transparent 30%
+        );
+
+    z-index: -1;
+
+}
+
+
+/* ==========================================
+                 CABECERA
+========================================== */
+
+.header {
+
+    text-align: center;
+
+    padding: 55px 20px 35px;
+
+}
+
+
+.logo {
+
+    font-size: 58px;
+
+    font-weight: 800;
+
+    letter-spacing: 5px;
+
+    color: white;
+
+    text-shadow:
+        0 0 15px rgba(0, 145, 255, 0.5),
+        0 0 35px rgba(0, 100, 255, 0.3);
+
+}
+
+
+.logo strong {
+
+    color: #159cff;
+
+}
+
+
+.header p {
+
+    margin-top: 8px;
+
+    font-size: 15px;
+
+    letter-spacing: 5px;
+
+    color: #9cccf5;
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================
+          SELECTOR CLIENTE / CONVENIO
+========================================== */
+
+.selector-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 10px 20px 40px;
+
+}
+
+
+.selector {
+
+    display: flex;
+
+    gap: 12px;
+
+    background: rgba(3, 17, 32, 0.85);
+
+    border: 1px solid rgba(65, 164, 255, 0.25);
+
+    padding: 8px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35);
+
+}
+
+
+.tipo-precio {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 190px;
+
+    padding: 14px 22px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: #7893aa;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: 0.25s;
+
+}
+
+
+.tipo-precio small {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #6d8295;
+
+}
+
+
+.tipo-precio .icono {
+
+    font-size: 24px;
+
+}
+
+
+.tipo-precio b {
+
+    position: absolute;
+
+    right: 10px;
+
+    top: 7px;
+
+    font-size: 9px;
+
+    background: #0b9dff;
+
+    color: white;
+
+    padding: 3px 6px;
+
+    border-radius: 5px;
+
+}
+
+
+.tipo-precio:hover {
+
+    color: white;
+
+    background: rgba(20, 112, 190, 0.15);
+
+}
+
+
+.tipo-precio.activo {
+
+    background:
+        linear-gradient(
+            135deg,
+            #087ee8,
+            #0756b8
+        );
+
+    color: white;
+
+    box-shadow:
+        0 7px 20px rgba(0, 115, 255, 0.3);
+
+}
+
+
+.tipo-precio.activo small {
+
+    color: #cceaff;
+
+}
+
+
+/* ==========================================
+                CONTENEDOR
+========================================== */
+
+.contenedor {
+
+    width: min(1200px, 94%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+}
+
+
+/* ==========================================
+                  SECCIONES
+========================================== */
+
+.seccion {
+
+    background:
+        rgba(5, 22, 40, 0.78);
+
+    border:
+
+        1px solid
+        rgba(70, 168, 255, 0.18);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
+
+    backdrop-filter: blur(12px);
+
+}
+
+
+.titulo-seccion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.icono-seccion {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087fe9,
+            #064a9e
+        );
+
+    font-size: 22px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 110, 255, 0.25);
+
+}
+
+
+.titulo-seccion h2 {
+
+    font-size: 23px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.titulo-seccion p {
+
+    color: #6e9bc2;
+
+    font-size: 12px;
+
+    margin-top: 2px;
+
+}
+
+
+/* ==========================================
+                PRODUCTOS
+========================================== */
+
+.producto {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    min-height: 70px;
+
+    padding: 12px 14px;
+
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 45, 76, 0.7),
+            rgba(5, 27, 48, 0.8)
+        );
+
+    border: 1px solid rgba(60, 145, 220, 0.13);
+
+    transition: 0.2s;
+
+}
+
+
+.producto:hover {
+
+    border-color:
+        rgba(45, 158, 255, 0.5);
+
+    transform: translateY(-1px);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(12, 61, 105, 0.8),
+            rgba(6, 31, 55, 0.9)
+        );
+
+}
+
+
+/* ==========================================
+              INFORMACIÓN PRODUCTO
+========================================== */
+
+.informacion-producto {
+
+    flex: 1;
+
+}
+
+
+.nombre-producto {
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.precio-producto {
+
+    color: #3aaaff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-top: 4px;
+
+}
+
+
+/* ==========================================
+                 CONTROLES
+========================================== */
+
+.controles {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.boton-cantidad {
+
+    width: 34px;
+
+    height: 34px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.boton-cantidad.menos {
+
+    background: #173b59;
+
+}
+
+
+.boton-cantidad.mas {
+
+    background: #087fe8;
+
+}
+
+
+.boton-cantidad:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+.cantidad {
+
+    width: 25px;
+
+    text-align: center;
+
+    font-weight: 700;
+
+    color: #d9efff;
+
+}
+
+
+/* ==========================================
+                ELIMINAR
+========================================== */
+
+.boton-eliminar {
+
+    width: 34px;
+
+    height: 34px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: rgba(255, 55, 70, 0.12);
+
+    color: #ff6875;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.boton-eliminar:hover {
+
+    background: #e63950;
+
+    color: white;
+
+}
+
+
+/* ==========================================
+                  RESUMEN
+========================================== */
+
+.resumen {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: min(900px, 92%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 18px 22px;
+
+    background:
+        rgba(3, 17, 31, 0.94);
+
+    border:
+        1px solid
+        rgba(49, 157, 255, 0.35);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,0.5);
+
+    backdrop-filter: blur(15px);
+
+    z-index: 10;
+
+}
+
+
+.resumen > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.resumen span {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #66849e;
+
+}
+
+
+.resumen strong {
+
+    font-size: 20px;
+
+    margin-top: 3px;
+
+}
+
+
+.total {
+
+    margin-left: auto;
+
+}
+
+
+.total strong {
+
+    color: #39aaff;
+
+    font-size: 25px;
+
+}
+
+
+.boton-reset {
+
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 12px 17px;
+
+    background: #102d46;
+
+    color: #8db9d9;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.boton-reset:hover {
+
+    background: #e63950;
+
+    color: white;
+
+}
+
+
+/* ==========================================
+                  FOOTER
+========================================== */
+
+footer {
+
+    text-align: center;
+
+    margin-top: 50px;
+
+    color: #496d89;
+
+}
+
+
+.logo-footer {
+
+    color: #238ed9;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+footer p {
+
+    margin-top: 7px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ==========================================
+                 RESPONSIVE
+========================================== */
+
+@media (max-width: 850px) {
+
+    .contenedor {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .logo {
+
+        font-size: 40px;
+
+    }
+
+
+    .header p {
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .selector {
+
+        width: 100%;
+
+        flex-direction: column;
+
+    }
+
+
+    .tipo-precio {
+
+        width: 100%;
+
+    }
+
+
+    .producto {
+
+        align-items: flex-start;
+
+    }
+
+
+    .controles {
+
+        gap: 4px;
+
+    }
+
+
+    .resumen {
+
+        gap: 15px;
+
+        padding: 14px;
+
+    }
+
+
+    .resumen strong {
+
+        font-size: 16px;
+
+    }
+
+
+    .total strong {
+
+        font-size: 19px;
+
+    }
+
+
+    .boton-reset {
+
+        padding: 10px;
+
+        font-size: 10px;
+
+    }
+
+}

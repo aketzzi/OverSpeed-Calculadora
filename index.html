@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OverSpeed | Mecánico</title>
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FONDO -->
+    <div class="fondo"></div>
+
+    <!-- CABECERA -->
+    <header class="header">
+
+        <div class="logo">
+            <span>OVER</span><strong>SPEED</strong>
+        </div>
+
+        <p>PRECIOS DEL NUEVO MECÁNICO</p>
+
+    </header>
+
+
+    <!-- SELECTOR DE PRECIOS -->
+    <section class="selector-container">
+
+        <div class="selector">
+
+            <button
+                id="cliente"
+                class="tipo-precio activo"
+                onclick="seleccionarCliente()">
+
+                <span class="icono">👤</span>
+
+                <span>
+                    <small>PRECIO</small>
+                    CLIENTE
+                </span>
+
+            </button>
+
+
+            <button
+                id="convenio"
+                class="tipo-precio"
+                onclick="seleccionarConvenio()">
+
+                <span class="icono">🤝</span>
+
+                <span>
+                    <small>PRECIO</small>
+                    CONVENIO
+                </span>
+
+                <b>-10%</b>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTENIDO -->
+    <main class="contenedor">
+
+
+        <!-- TUNING -->
+        <section class="seccion">
+
+            <div class="titulo-seccion">
+
+                <div class="icono-seccion">
+                    ⚙️
+                </div>
+
+                <div>
+                    <h2>TUNING</h2>
+                    <p>Rendimiento y mecánica</p>
+                </div>
+
+            </div>
+
+
+            <div
+                id="tuning"
+                class="lista-precios">
+            </div>
+
+        </section>
+
+
+
+        <!-- MODIFICACIONES -->
+        <section class="seccion">
+
+            <div class="titulo-seccion">
+
+                <div class="icono-seccion">
+                    🔧
+                </div>
+
+                <div>
+                    <h2>MODIFICACIONES</h2>
+                    <p>Estética y servicios</p>
+                </div>
+
+            </div>
+
+
+            <div
+                id="modificaciones"
+                class="lista-precios">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- TOTAL -->
+    <section class="resumen">
+
+        <div>
+
+            <span>PIEZAS SELECCIONADAS</span>
+
+            <strong id="cantidad-total">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="total">
+
+            <span>TOTAL</span>
+
+            <strong id="precio-total">
+                0 $
+            </strong>
+
+        </div>
+
+
+        <button
+            class="boton-reset"
+            onclick="reiniciar()">
+
+            ↻ REINICIAR
+
+        </button>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo-footer">
+            OVERSPEED
+        </div>
+
+        <p>
+            NUEVO MECÁNICO · TODOS LOS PRECIOS EN $
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
